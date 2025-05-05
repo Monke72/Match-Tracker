@@ -1,0 +1,11 @@
+body {
+  font-family: var(--main-font);
+  color: var(--color-light);
+  font-size: var(--main-size);
+  height: 100vh;
+}
+
+.container {
+  padding-inline: 40px;
+  margin-inline: auto;
+}
