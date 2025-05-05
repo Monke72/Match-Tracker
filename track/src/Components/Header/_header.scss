@@ -21,6 +21,13 @@
     align-items: center;
     gap: 20px;
     background-color: #0b0e12;
+    justify-content: space-between;
+    &:disabled {
+      cursor: unset;
+      @include hover {
+        opacity: 1;
+      }
+    }
   }
 
   &__reload {
@@ -34,8 +41,11 @@
     align-items: center;
     gap: 15px;
     background-color: #0b0e12;
-    padding: 15px 20px;
+    padding: 13px 20px;
     border-radius: 4px;
+    img {
+      max-width: 30px;
+    }
   }
   &__status {
     position: relative;
@@ -73,7 +83,7 @@
 }
 
 .header__reload-rotate.active {
-  animation: rotate ease-in-out 3s;
+  animation: rotate linear 0.5s;
 }
 
 @keyframes rotate {

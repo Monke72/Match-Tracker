@@ -1,4 +1,3 @@
-import React from "react";
 import { GameData } from "../../interfaces/interfaces";
 
 const MatchesCommandsBtm = ({
@@ -21,7 +20,7 @@ const MatchesCommandsBtm = ({
           <span className="match__gray"> Место:</span> {el.teams[num].place}
         </li>
         <li className="match__command-btm__item">
-          <span className="match__gray"> Всего убийств:</span>
+          <span className="match__gray"> Всего убийств: </span>
           {getTotalKills(num)}
         </li>
       </ul>
