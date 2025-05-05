@@ -4,6 +4,9 @@
       &__user-name {
         font-size: 16px;
         padding-left: 8px;
+        @include tablet {
+          font-size: 14px;
+        }
       }
       &__item {
         display: flex;
@@ -16,10 +19,21 @@
         background-color: #101318;
         padding: 10px 20px;
         justify-content: space-between;
+        @include desktop {
+          flex-direction: column;
+        }
+        @include tablet {
+          padding: 7px 5px;
+        }
       }
       &__user {
         display: flex;
         align-items: center;
+        img {
+          @include tablet {
+            width: 30px;
+          }
+        }
       }
     }
     &-btm {

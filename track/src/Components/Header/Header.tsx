@@ -28,8 +28,10 @@ const Header = () => {
   }, [data, dispatch]);
 
   const handlerReload = () => {
+    setReloadText("");
     setAnimate(true);
     setData((prev) => !prev);
+
     setTimeout(() => {
       setAnimate(false);
       console.log(loading);

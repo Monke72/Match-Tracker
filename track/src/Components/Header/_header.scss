@@ -3,15 +3,29 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 70px;
+  @include mobile {
+    flex-direction: column;
+  }
+  @include mobile-s {
+    padding-top: 20px;
+  }
   &__info {
     display: flex;
     gap: 30px;
     align-items: center;
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+      padding-bottom: 15px;
+    }
   }
 
   &__title {
     font-size: 38px;
     font-family: var(--title-font);
+    @include mobile-s {
+      font-size: 34px;
+    }
   }
 
   &__status-button {
@@ -34,6 +48,8 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    width: 100%;
+    justify-content: center;
   }
 
   &__reload-info {
@@ -46,6 +62,11 @@
     img {
       max-width: 30px;
     }
+    @include mobile {
+      position: absolute;
+      top: 10px;
+      z-index: 100;
+    }
   }
   &__status {
     position: relative;
@@ -54,11 +75,15 @@
   &__reload-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--color-red);
     color: var(--color-light);
     padding: 15px 50px;
     border-radius: 4px;
     gap: 12px;
+    @include mobile-s {
+      width: 100%;
+    }
   }
   &__status-choise {
     position: absolute;

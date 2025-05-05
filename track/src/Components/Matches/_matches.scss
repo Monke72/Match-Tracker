@@ -38,3 +38,10 @@
     left: 150%;
   }
 }
+.match__command-icon {
+  padding-right: 10px;
+  @include mobile-s {
+    max-width: 30px;
+    padding-right: 5px;
+  }
+}

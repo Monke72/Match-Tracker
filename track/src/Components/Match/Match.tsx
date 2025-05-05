@@ -38,6 +38,11 @@ const Match = ({ el }: { el: GameData }) => {
           >
             {el.status}
           </div>
+          {!open && (
+            <button className="match__command-button match__command-button__active">
+              <img src={strBottom} alt="" />
+            </button>
+          )}
         </div>
 
         <div className="match__command">
@@ -45,7 +50,7 @@ const Match = ({ el }: { el: GameData }) => {
             <img className="match__command-icon" src={commandIcon} alt="" />
           </span>
           {el.teams[1].nameId}
-          <button className="match__command-button">
+          <button className="match__command-button match__command-button__dis">
             <img src={strBottom} alt="" />
           </button>
         </div>
@@ -62,6 +67,7 @@ const Match = ({ el }: { el: GameData }) => {
                 getTotalKills={getTotalKills}
               />
             </div>
+            <span className="match__mobile-vs">VS</span>
             <div className="match__commands-too">
               <TeamBlock el={el} num={1} />
               <MatchesCommandsBtm
@@ -70,6 +76,9 @@ const Match = ({ el }: { el: GameData }) => {
                 getTotalKills={getTotalKills}
               />
             </div>
+            <button className="match__command-button match__command-button__active match__command-button__close">
+              <img src={strBottom} alt="" />
+            </button>
           </div>
         </div>
       )}
