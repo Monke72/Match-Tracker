@@ -1,9 +1,0 @@
-//base
-@import "./base/reset", "./base/mixins.scss", "./base/fonts",
-  "./base/defualt.scss", "./base/root";
-
-//components
-@import "./../src/Components/Header/header", "./../src/Components/Match/match",
-  "./../src/Components/Matches/matches",
-  "./../src/Components/TeamBlock/teamBlock",
-  "./../src/Components/MatchesCommandsBtm/matchesCommandsBtm";
