@@ -1,7 +1,7 @@
 import strBtm from "./icons/strBtm.svg";
 import errorIcon from "./icons/error.svg";
 import refresh from "./icons/Refresh.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
