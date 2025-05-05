@@ -306,6 +306,16 @@ body {
   width: 100%;
   min-width: 165px;
 }
+@media (hover: hover) {
+  .header__status-button:hover {
+    opacity: 0.8;
+  }
+}
+@media (hover: none) {
+  .header__status-button:active {
+    opacity: 0.8;
+  }
+}
 .header__status-button__live {
   color: var(--color-light);
   background-color: var(--color-green);
@@ -335,4 +345,98 @@ body {
   100% {
     rotate: -360deg;
   }
+}
+.match {
+  cursor: pointer;
+  border-radius: 18px;
+}
+.match__top, .match__commands {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-dark-any);
+  gap: 50px;
+}
+.match__top-one, .match__top-too, .match__commands-one, .match__commands-too {
+  width: 50%;
+}
+.match__wrapper {
+  width: 100%;
+  border-radius: 4px;
+}
+.match__res {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.match__score {
+  font-size: 20px;
+}
+.match__status {
+  font-size: 14px;
+  padding: 4px 18px;
+  background-color: var(--color-green);
+  border-radius: 4px;
+}
+.match__command {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.match__command-button {
+  padding-left: 25px;
+}
+.match__gray {
+  color: var(--color-gray);
+}
+
+.match__commands {
+  padding-bottom: 40px;
+}
+
+.matches {
+  padding-top: 30px;
+}
+.matches__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.match__command-top__user-name {
+  font-size: 16px;
+  padding-left: 8px;
+}
+.match__command-top__item {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.match__command-top__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #101318;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.match__command-top__user {
+  display: flex;
+  align-items: center;
+}
+.match__command-btm__list {
+  display: flex;
+}
+
+.match__command-top__list {
+  width: 100%;
+}
+
+.match__command-btm__list {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #101318;
 }/*# sourceMappingURL=main.css.map */

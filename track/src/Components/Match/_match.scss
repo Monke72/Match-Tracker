@@ -1,0 +1,61 @@
+.match {
+  cursor: pointer;
+  border-radius: 18px;
+  &__top,
+  &__commands {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark-any);
+    gap: 50px;
+    &-one,
+    &-too {
+      width: 50%;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    border-radius: 4px;
+  }
+  &__res {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__score {
+    font-size: 20px;
+  }
+
+  &__status {
+    font-size: 14px;
+    padding: 4px 18px;
+    background-color: var(--color-green);
+    border-radius: 4px;
+  }
+
+  &__command {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__command-icon {
+  }
+
+  &__score {
+  }
+
+  &__command-button {
+    padding-left: 25px;
+  }
+
+  &__info {
+  }
+}
+.match__gray {
+  color: var(--color-gray);
+}
+.match__commands {
+  padding-bottom: 40px;
+}

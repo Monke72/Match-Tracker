@@ -58,6 +58,9 @@
   &__status-button {
     width: 100%;
     min-width: 165px;
+    @include hover {
+      opacity: 0.8;
+    }
     &__live {
       color: var(--color-light);
       background-color: var(--color-green);

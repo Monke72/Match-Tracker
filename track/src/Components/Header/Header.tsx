@@ -3,10 +3,13 @@ import errorIcon from "./icons/error.svg";
 import refresh from "./icons/Refresh.svg";
 import { useState } from "react";
 
+type TypeStatus = "all" | "finished" | "live";
+
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [reload, setReload] = useState<boolean>(true);
   const [animate, setAnimate] = useState<boolean>(false);
+  const [status, setStatus] = useState<TypeStatus>("all");
 
   const handlerReload = () => {
     setReload(true);
@@ -16,6 +19,12 @@ const Header = () => {
       setAnimate(false);
     }, 3000);
   };
+
+  const handlerStatus = (status: TypeStatus) => {
+    setStatus(status);
+    setOpen(false);
+  };
+
   return (
     <header className="header container">
       <div className="header__info">
@@ -34,12 +43,26 @@ const Header = () => {
             <div className="header__status-choise">
               <ul className="header__status-list">
                 <li className="header__status-item">
-                  <button className="header__status-button header__status-button__live">
+                  <button
+                    className="header__status-button header__status-button__all"
+                    onClick={() => handlerStatus("all")}
+                  >
+                    All
+                  </button>
+                </li>
+                <li className="header__status-item">
+                  <button
+                    className="header__status-button header__status-button__live"
+                    onClick={() => handlerStatus("live")}
+                  >
                     Live
                   </button>
                 </li>
                 <li className="header__status-item">
-                  <button className="header__status-button header__status-button__finish">
+                  <button
+                    className="header__status-button header__status-button__finish"
+                    onClick={() => handlerStatus("finished")}
+                  >
                     Finished
                   </button>
                 </li>

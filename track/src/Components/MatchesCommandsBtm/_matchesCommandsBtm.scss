@@ -1,0 +1,12 @@
+.match {
+  &__command-btm {
+    &__list {
+      margin-top: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #101318;
+    }
+  }
+}

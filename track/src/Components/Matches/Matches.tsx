@@ -15,7 +15,7 @@ const Matches: FC = () => {
     dispatch(fetchData());
   }, [dispatch]);
   return (
-    <section className="mathes">
+    <section className="matches container">
       <ul className="matches__list">
         {items.map((el) => (
           <li key={el.gameId}>

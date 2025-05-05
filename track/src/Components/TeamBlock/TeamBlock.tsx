@@ -1,7 +1,12 @@
 import { GameData } from "../../interfaces/interfaces";
 import userIcon from "./Icon/avatar.png";
 
-const TeamBlock = ({ el, num }: { el: GameData; num: number }) => {
+interface ITeamBlock {
+  el: GameData;
+  num: number;
+}
+
+const TeamBlock = ({ el, num }: ITeamBlock) => {
   return (
     <div className="match__command">
       <ul className="match__command-top__list">
@@ -16,19 +21,8 @@ const TeamBlock = ({ el, num }: { el: GameData; num: number }) => {
                   </h6>
                 </div>
                 <div className="match__command-top__kills">
-                  Убийств : {player.kills}
+                  <span className="match__gray">Убийств:</span> {player.kills}
                 </div>
-              </div>
-              <div className="match__command-btm">
-                <ul className="match__command-btm__list">
-                  <li className="match__command-btm__item">
-                    Points: +{el.teams[0].matchPoints}
-                  </li>
-                  <li className="match__command-btm__item">
-                    Место: {el.teams[0].place}
-                  </li>
-                  <li className="match__command-btm__item">Всего убийств:12</li>
-                </ul>
               </div>
             </div>
           ))}
