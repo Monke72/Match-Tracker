@@ -7,6 +7,9 @@ body {
 }
 
 .container {
-  padding-inline: 15px;
+  padding-inline: 40px;
   margin-inline: auto;
+  @include mobile-s {
+    padding-inline: 15px;
+  }
 }

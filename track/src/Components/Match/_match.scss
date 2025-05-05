@@ -75,33 +75,35 @@
   }
 }
 .match__mobile-vs {
-  width: 100%;
-  position: relative;
-  color: #313a47;
-  display: flex;
-  justify-content: center;
-  z-index: 111;
-  overflow: hidden;
+  display: none;
+  @include mobile {
+    width: 100%;
+    position: relative;
+    color: #313a47;
+    display: flex;
+    justify-content: center;
+    z-index: 111;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
 
-  &::after {
-    content: "";
-    position: absolute;
+      width: 47%;
+      background-color: #313a47;
+      height: 1px;
+      top: 45%;
+      right: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
 
-    width: 47%;
-    background-color: #313a47;
-    height: 1px;
-    top: 45%;
-    right: 0;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-
-    width: 47%;
-    background-color: #313a47;
-    height: 1px;
-    top: 45%;
-    left: 0;
+      width: 47%;
+      background-color: #313a47;
+      height: 1px;
+      top: 45%;
+      left: 0;
+    }
   }
 }
 .match__command-button__active {
